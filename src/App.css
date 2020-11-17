@@ -28,7 +28,7 @@ button:hover {
   transform: scale(1.2);
   transition: all ease 1s;
   cursor: pointer;
-  background-color: rgb(170, 7, 170);
+  background-color: rgb(167, 170, 7);
 }
 
 @keyframes wobble {
