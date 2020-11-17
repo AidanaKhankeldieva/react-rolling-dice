@@ -1,38 +1,56 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Dice {
+  color: rgb(170, 7, 170);
+  font-size: 7.25rem;
+  margin: 10px;
+}
+.rolling {
+  animation-name: wobble;
+  animation: 2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Dice-main {
+  display: inline-block;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  display: block;
+  margin: 10px auto;
+  font-size: 3rem;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  transform: scale(1.2);
+  transition: all ease 1s;
+  cursor: pointer;
+  background-color: rgb(170, 7, 170);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes wobble {
+  0% {
+    transform: none;
   }
-  to {
-    transform: rotate(360deg);
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  100% {
+    transform: none;
   }
 }
